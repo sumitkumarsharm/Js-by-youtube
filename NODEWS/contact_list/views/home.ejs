@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+
+    <script src="https://kit.fontawesome.com/f818a29f52.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/sumit.css">
+    
+</head>
+<body>
+    <h1 id="page-heading">
+        <i class="fa-solid fa-address-book" style="color: #616161;"></i>My Contact List</h1>
+    <div id="contact-list-container">
+        <ul>
+            <%for(let i of contact_list){%>
+             <li class="contact">
+                <div class="details">
+                <p>Name:<%=i.name%></p>
+                <p>Phone:<%=i.phone%></p>
+                <p>Address:<%=i.address%></p>
+
+                <div class="delete-button">
+                    <a href="/delete-contact/?phone=<%= i.phone %>">
+                    <i class="fa-solid fa-rectangle-xmark"></i>
+                    </a>  
+                </div>
+                </div>
+                
+             </li>
+            <%}%>
+        </ul>
+    </div>
+         <!-- acion is use to where do you want to send the data -->
+        <form id="new-contact-form" action="create_contact" method="post">
+             <p>Name:-&nbsp;<input type="text" name="name" placeholder="Enter name" required></p>
+             <p>Phone:-&nbsp;<input type="text" name="phone" placeholder="Enter Phone" required></p>
+             <p>Address:-<input type="text" name="address" placeholder="Enter Address" required></p>
+             <p><button type="submit">Add it</button></p>
+
+
+
+
+
+        </form>
+
+    <script src="/js/home.js"></script>
+</body>
+</html>

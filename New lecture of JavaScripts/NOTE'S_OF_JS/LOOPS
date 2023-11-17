@@ -1,0 +1,19 @@
+#. ARRAYS, LOOPS, FUNCTIONS, OBJECTS
+
+THERE ARE THERE TYPE OF LOOPS
+(1) FOR LOOPS
+(2) WHILE LOOPS
+(3) DO WHILE LOOPS
+
+FOR LOOPS :- WHEN WE ARE NOT KNOW THE NUMBER OF ITRATION IN ADVANCE THAN WE USE 
+             FOR LOOP
+             SYNTEX:- FOR()
+
+WHILE LOOPS :- WHEN WE KNOW THE NUMBER OF ITRATION IN ADVANCE THAN WE HAVE TO USE 
+              WHILE LOOPS;
+
+DO WHI LOOPS :- The do...while statements combo defines a code block to be executed once, and repeated as long as a               condition is true.The do...while is used when you want to run a code block at least one time.
+
+___________________________________________________________________________________________________________________
+
+#. FUNCTIONS IN JS

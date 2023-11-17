@@ -1,0 +1,10 @@
+body {
+  height: 100%; }
+
+#footer-design {
+  display: flex;
+  align-items: flex-end;
+  padding: 5px;
+  background-color: #979090;
+  margin-top: 40%;
+  color: aliceblue; }

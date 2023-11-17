@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+</head>
+<body>
+    <h1> <%= title %> </h1>   
+    
+    <section>
+        <h4>Posts</h4>
+        <form action="/posts/create" id="new-post-form" method="post">
+            <textarea name="content" id="" cols="30" rows="3" placeholder="Type here..." required></textarea>
+            <input type="submit" name="" id="" value="Post">
+        </form>
+        <div id = post-list-Container>
+            <ul>
+                <%for(post of posts){%>
+                    <%-include('_post')-%>
+
+                <%} %>
+            </ul>
+        </div>
+    </section id="user-friends">
+    <h4>Friends</h4>
+    <% for(u of all_users){ %>
+        <p>
+            <a href="/users/profile/<%= u.id%>"><%=u.name%></a>
+        </p>
+
+
+        <%}%>
+    <section>
+        
+    </section>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<li>
+    <p>
+        <% if (locals.user && locals.user.id == comment.user.id){%>
+            <small>
+                <a href="/comments/destroy/<%=comment.id%>">
+                    <button type="delete" value="Delete">X</button>
+                </a>
+            </small>  
+            <%}%>   
+                <b>Message: <%=comment.content%> </b> 
+                <br>
+            <small>
+                Auther &nbsp;:&nbsp; &nbsp;&nbsp;&nbsp; <%= comment.user.name%>
+            </small>
+    </p>
+
+</li>

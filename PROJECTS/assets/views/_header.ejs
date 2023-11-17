@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header id="page-logo"><img id="image-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAACMCAMAAACTbt0bAAAAaVBMVEUAAAD////Ozs729vbT09PZ2dnh4eHw8PD8/Py2tra8vLzm5ubAwMDIyMirq6vt7e2YmJhXV1ehoaFzc3N9fX0zMzOPj49LS0sXFxc9PT0mJiaFhYVtbW0uLi5kZGQ4ODhEREQeHh4LCwupN+IhAAAEj0lEQVRoge2Z2YKqMAyGTTcoXSitsiqi7/+Qp6Djguh4GPSq3804WPlpmqRJWa0CgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgELiyKbIsq76i1DaapBGOPThielt+UGyXeS040yv2f8X6U2oG4bNWhJCS2hpjOfKiyXF5tc6Kk1ZKKW+cu65enQCgw7JqVX5Sw4Jq4x7WjAPoBdU265MlU8F1U9UTI44YWLaQ2jFLeieJMZG67Z6NooDdMnrmZEqEjNu9GMYANwuotXJQo8T8crcyBvRnwfrkJ4LYfGrZ7lEs+aNcoaN+5YTU2TsOX2a/P9Qr2j6YAROVL+V7L9nSIQgIX38ySV7Ih1TJkPnK5Da2D3HMuNl8Q67Sgxzl66/I7fggh7hbLBHv3fNdpNZDciZ6oRTVk0H07G47PgQ5su1ycqsuBjXteaXtw04onS26j1Kg05uW8zksTqUullTz8QU4mUr4G9VHuVo87Mo0njRoMyQVu8Ts8rvM1IDKJwb56UVEdwvIrRyQ7fW/A04nFrBmEFM+xzPLR5NUUl99rhagJu5LIFL5nDDfifTRXvurRTsBgj/+zEE00zVT74Evvm4pAzThMRkAMdmMPYjE/lHvL+V8f/3M7OQKek+KhoqdJblr91MD/NaPpf/m5qES7DRYoNtVfWMdH3TmMoJaCWTaM4qG0ygaqk7fliT5uBCsTASkcSK62McC06A08KqORHYZ5quo9X4oM1qkmgpj6yM8c0ay8VIe6q5trOaI4b4zwUyuL3MtEkF8evK1Gz27yBZBnEfEOLBZmorT1YL7JRN6RZh2lkY6bxUIiQhRUmr3JKHUm6oXTlg/WTKUfJnyEZpD7A2A5WDTTikJlnn/2wHFKMf50OBQshVDmm6Y93qFkH8qadZt+073uCvW3IvGek1S0qc7zXgDpO/HMil4g4UZFtUR7lY6osyXkf5LAdRoKoihxerovZ/+V5VaZv1mRc3JtJtjCUnV+Yno7cqA+QnoPsjb3Jy60Uoxym2z89Ff9b2N/L/OeC9TcdsP6ZQyX6CWfabwgTT1k2O9O5UlnSpW0XRMPOOgU6SrFoBfMlW7zrrhgwI6kUDu6MgGxPaXQbc0Pjz68Q7gcS6F1L/miSwF+f5eV7BUnkMAAZuX9yjwV53WLUeNkf0JQz/FeYcF9O12uGVpcrW+88ExSxCDfq820r5IvKmAG4jtLEHvbt0bw2qG1Z0JEUSzmswjTG5NYxwwfhetHYCat4bx5GY/wgIZGR4BVrP0VkbIX9tTDmgUdO4nh8+g/TWcElAjvQ2GNPlYP5qAHJVEpc+lbyzETPjD/Eq/Q02WsYtgAI3irfRN/pM+ZAFaGJcdBz8/xj+2gBiPdssu9XrJx5pu68utuwtrX0oR/rdznhfUo5K87I/XlP3AAe8Ze5/3tr4yjj7nn94/BL7JaPukPxJKFjxWeKC4rYlMX4Er/aTmX4YM2Hk+h+FggcpPvRE44/cg6+uPIh/O85j8oLec8SUvTqN+cpHg5hsvduzwRicmkruvvEfyG1GutXXbhQ9pAoFA4Pv8A1TrOI0VeaHQAAAAAElFTkSuQmCC" alt=""></header>
+    <ul id="sign-name" >
+        <% if (locals.user){%>
+           <li>
+               <a href="/users/profile">
+                  <%= user.name %>
+               </a>
+               
+           </li>
+           <li>
+                <a href="/users/sign-out"> Sign out </a>
+           </li>
+        <% }else{ %>
+              <li>
+                  <a href="/users/sign-in">Sign in</a>
+              </li>
+
+              <li>
+                  <a href="/users/sign-up">Sign Up</a>
+              </li>
+
+        <% } %>
+    </ul>
+
+</body>
+</html>
