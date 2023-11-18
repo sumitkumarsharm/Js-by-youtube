@@ -8,3 +8,16 @@
 7.Undefined
 8.symbol */
 
+//number
+let num = 12;
+console.log(num);
+console.log(typeof num);
+
+let Name = "Harsh";
+console.log(typeof Name);
+
+let B = 0;
+console.log(B);;
+
+let n = null;
+console.log(n);
